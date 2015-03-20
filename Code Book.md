@@ -31,7 +31,7 @@ Variables of results.txt:
 Subject: identifier of volunteer (1-30)
 Activity: Description of activity performed.
 
-The remaining variables are "features" of the study. Please see below for further detail (copied from "features_info.txt" file).
+The remaining variables are "features" of the study. Please see below for further detail and units of measurement (copied from "features_info.txt" file).
 
 Feature Selection 
 =================
