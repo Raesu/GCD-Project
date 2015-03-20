@@ -39,6 +39,12 @@ loadFiles <- function(set){
 # Check that all files exist
 checkFiles()
 
+# Load required packages
+if(!("package:reshape2" %in% search())){
+    print("Loading package:reshape2.")
+    library(reshape2)
+}
+
 # Load variable names (remove punctuation) and activities
 features <- read.table("UCI HAR Dataset/features.txt")[,2]
 features <- gsub("[[:punct:]]","",features)
