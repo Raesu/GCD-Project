@@ -62,14 +62,13 @@ msData <- fullData[,grepl("subject|activity|mean|std",
 
 # Melt and cast data for result, taking the mean for each subject's activity
 dataMelt <- melt(msData,id=c("Subject","Activity"),measure.vars=names(msData)[3:88])
-result <- dcast(dataMelt,Subject+Activity~variable,mean)
+results <- dcast(dataMelt,Subject+Activity~variable,mean)
 
 # Write result to file
-write.table(result,"results.txt")
+write.table(results,"results.txt",row.name=FALSE)
 print("Result file exported as results.txt")
 
 # Clean up workspace
 rm(features,activityLabels,loadFiles,checkFiles,testData,
    trainData,fullData,msData,dataMelt)
 print("Workspace cleaned up.")
-
